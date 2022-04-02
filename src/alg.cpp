@@ -44,7 +44,7 @@ std::string infx2pstfx(std::string inf) {
         }
         res += ' ';
       } else {
-        razdel(inf[i], &res);
+        part(inf[i], &res);
       }
       continue;
     }
