@@ -7,6 +7,7 @@ class TStack {
  private:
      T arr[size]
      int top = -1;
+
  public:
      TStack():top(-1) {}
      bool isEmpty() {
@@ -15,7 +16,7 @@ class TStack {
      bool isFull() {
        return top == size - 1;
      }
-     void push(T& value) {
+     void push(T value) {
          if (!isFull()) {
              arr[++top] = value;
          else
