@@ -4,7 +4,6 @@
 const int size = 100;
 template<typename T, int size>
 class TStack {
-class TStack {
 private:
     T arr[size]
     int top = -1;
