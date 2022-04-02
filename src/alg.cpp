@@ -61,8 +61,8 @@ int eval(std::string pref) {
     while (i < pref.size()) {
         if (pref[i] >= '0') {
             st.push(pref[i] - '0');
-        } else { 
-        } else {
+        }
+        else {
             if (pref[i] != ' ') {
                 a2 = st.Get();
                 st.pop();
