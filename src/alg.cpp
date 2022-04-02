@@ -14,11 +14,10 @@ int getPrior(char sim) {
     default:return -1;
   }
 }
-void razdel(char sim, std::string* str) {
+void part(char sim, std::string* str) {
   *str += sim;
   *str += ' ';
 }
-
 int Calc(int a, int b, char c) {
   switch (c) {
     case '+':
@@ -55,13 +54,13 @@ std::string infx2pstfx(std::string inf) {
     } else {
       if (getPrior(inf[i]) == 1) {
         while (getPrior(stack1.get()) != 0) {
-          razdel(stack1.get(), &res);
+          part(stack1.get(), &res);
           stack1.pop();
         }
         stack1.pop();
       } else if (getPrior(inf[i]) <= getPrior(stack1.get())) {
         while (getPrior(stack1.get()) > 1) {
-          razdel(stack1.get(), &res);
+          part(stack1.get(), &res);
           stack1.pop();
         }
         stack1.push(inf[i]);
@@ -70,7 +69,7 @@ std::string infx2pstfx(std::string inf) {
   }
   while (!stack1.isEmpty()) {
     if (getPrior(stack1.get()) > 1) {
-      razdel(stack1.get(), &res);
+      part(stack1.get(), &res);
     }
     stack1.pop();
   }
