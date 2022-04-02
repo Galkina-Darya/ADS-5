@@ -5,7 +5,7 @@ const int size = 100;
 template<typename T, int size>
 class TStack {
  private:
-     T arr[size]
+     T arr[size];
      int top = -1;
 
  public:
@@ -17,11 +17,10 @@ class TStack {
        return top == size - 1;
      }
      void push(T value) {
-         if (!isFull()) {
+         if (!isFull()) 
              arr[++top] = value;
          else
              throw "Full!";
-         }
      }
      T get() {
          if (!isEmpty())
