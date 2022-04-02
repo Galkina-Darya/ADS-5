@@ -59,9 +59,8 @@ int eval(std::string pref) {
   TStack<int, 100> st;
     int a1, a2, res, i = 0;
     while (i < pref.size()) {
-        if (pref[i] >= '0') {
+        if (pref[i] >= '0')
             st.push(pref[i] - '0');
-        }
         else {
             if (pref[i] != ' ') {
                 a2 = st.Get();
