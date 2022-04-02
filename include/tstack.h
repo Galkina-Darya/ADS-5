@@ -19,23 +19,14 @@ class TStack {
      void push(T value) {
          if (!isFull())
              arr[++top] = value;
-         else
-             throw "Full!";
      }
      T get() {
          if (!isEmpty())
              return arr[top];
-         else
-             throw "Empty!";
      }
      void pop() {
          if (!isEmpty())
-             --top;
-         else
-             throw "Empty!";
-     }
-     int getSize() {
-         return top + 1;
+             top--;
      }
 };
 #endif  // INCLUDE_TSTACK_H_
